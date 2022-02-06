@@ -1,0 +1,9 @@
+name: Duels
+version: 1.0-SNAPSHOT
+main: com.github.gabrideiros.duels.DuelsPlugin
+authors:
+ - Gabrideiros
+commands:
+  accept: {}
+  duel: {}
+  stats: {}

@@ -1,0 +1,9 @@
+database:
+  type: 'sqlite'
+  mysql:
+    address: 'localhost:3306'
+    username: 'root'
+    password: ''
+    database: 'test'
+  sqlite:
+    file: 'database/database.db'

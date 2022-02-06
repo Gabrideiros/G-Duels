@@ -1,0 +1,22 @@
+kits:
+  default:
+    name: 'Default'
+    armor_content:
+      helmet:
+        material: 'LEATHER_HELMET'
+        amount: 1
+      chestplate:
+        material: 'LEATHER_CHESTPLATE'
+        amount: 1
+      leggings:
+        material: 'AIR'
+        amount: 1
+      boots:
+        material: 'LEATHER_BOOTS'
+        amount: 1
+    inventory_content:
+      1:
+        slot: 8
+        item:
+          material: 'DIAMOND_SWORD'
+          amount: 1

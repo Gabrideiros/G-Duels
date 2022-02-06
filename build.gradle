@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'net.minecrell.plugin-yml.bukkit' version '0.3.0'
+}
+
+group 'com.github.gabrideiros'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven { url = 'https://mvnrepository.com/artifact/com.zaxxer/HikariCP' }
+    maven { url = 'https://jitpack.io/' }
+    maven { url = 'https://repo.codemc.org/repository/maven-public/' }
+}
+
+dependencies {
+
+    compileOnly 'walkmc:spigot:1.8.9'
+
+    implementation 'com.github.HenryFabio:sql-provider:9561f20fd2'
+
+    implementation 'com.zaxxer:HikariCP:2.3.2'
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+}
+
+bukkit {
+    main = 'com.github.gabrideiros.duels.DuelsPlugin'
+    authors = ['Gabrideiros']
+    version = "${project.version}"
+    commands {
+        duel
+        accept
+        stats
+    }
+}
+
+shadowJar {
+
+    relocate 'com.henryfabio.sqlprovider', 'com.github.gabrideiros.libs.sqlprovider'
+    relocate 'com.zaxxer.hikari', 'com.github.gabrideiros.libs.hikari'
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
