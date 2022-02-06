@@ -5,6 +5,8 @@ import com.github.gabrideiros.duels.model.Kit;
 import com.github.gabrideiros.duels.util.Registry;
 import org.bukkit.configuration.file.FileConfiguration;
 
+import java.util.Objects;
+
 public class KitFactory extends Registry<Kit> {
 
     private static final KitAdapter ADAPTER = new KitAdapter();
@@ -14,6 +16,6 @@ public class KitFactory extends Registry<Kit> {
     }
 
     public void register(FileConfiguration configuration) {
-        ADAPTER.parseList(configuration.getConfigurationSection("kits")).forEach(this::add);
+        ADAPTER.parseList(Objects.requireNonNull(configuration.getConfigurationSection("kits"))).forEach(this::add);
     }
 }

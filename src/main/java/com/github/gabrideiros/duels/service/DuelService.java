@@ -156,14 +156,14 @@ public class DuelService {
 
                 PlayerUtil.sendMessage(
                         adversary,
-                        Sound.LEVEL_UP,
+                        Sound.ENTITY_PLAYER_LEVELUP,
                         5f,
                         String.format("§eYou invited %s to a duel.", key.getName())
                 );
 
                 PlayerUtil.sendMessage(
                         key,
-                        Sound.LEVEL_UP,
+                        Sound.ENTITY_PLAYER_LEVELUP,
                         5f,
                         String.format("§e%s invited you to a duel.", adversary.getName())
                 );
@@ -177,14 +177,14 @@ public class DuelService {
                 if (hasBattle(key)) {
                     PlayerUtil.sendMessage(
                             adversary,
-                            Sound.LEVEL_UP,
+                            Sound.ENTITY_PLAYER_LEVELUP,
                             5f,
                             String.format("§e%s accepted your duel request.", key.getName())
                     );
 
                     PlayerUtil.sendMessage(
                             key,
-                            Sound.LEVEL_UP,
+                            Sound.ENTITY_PLAYER_LEVELUP,
                             5f,
                             String.format("§eYou accepted the duel of %s.", adversary.getName())
                     );
@@ -195,14 +195,14 @@ public class DuelService {
 
                 PlayerUtil.sendMessage(
                         adversary,
-                        Sound.LEVEL_UP,
+                        Sound.ENTITY_PLAYER_LEVELUP,
                         5f,
                         String.format("§e%s refused his request for a duel.", key.getName())
                 );
 
                 PlayerUtil.sendMessage(
                         key,
-                        Sound.LEVEL_UP,
+                        Sound.ENTITY_PLAYER_LEVELUP,
                         5f,
                         String.format("§eYou refused the duel of %s.", adversary.getName())
                 );

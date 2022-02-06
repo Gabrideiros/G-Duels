@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import static com.github.gabrideiros.duels.util.StringUtil.colorize;
 
@@ -21,7 +22,7 @@ public class ItemIAdapter implements IAdapter<ItemStack> {
 
         ItemStack material = section.contains("head") && !section.getString("head").isEmpty()
                 ? SkullCreator.itemFromUrl(section.getString("head"))
-                : new ItemStack(Material.getMaterial(section.getString("material")),
+                : new ItemStack(Objects.requireNonNull(Material.getMaterial(section.getString("material"))),
                 Math.min(1, section.getInt("amount")), (short) section.getInt("data"));
 
         ItemBuilder itemBuilder = new ItemBuilder(material);

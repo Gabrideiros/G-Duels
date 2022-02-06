@@ -5,6 +5,7 @@ import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static com.github.gabrideiros.duels.util.StringUtil.colorize;
 
@@ -17,11 +18,11 @@ public class KitAdapter implements IAdapter<Kit> {
         try {
             return Kit.builder()
                     .name(colorize(section.getName()))
-                    .helmet(ADAPTER.parse(section.getConfigurationSection("armor_content.helmet")))
-                    .chestPlate(ADAPTER.parse(section.getConfigurationSection("armor_content.chestplate")))
-                    .leggings(ADAPTER.parse(section.getConfigurationSection("armor_content.leggings")))
-                    .boots(ADAPTER.parse(section.getConfigurationSection("armor_content.boots")))
-                    .items(ADAPTER.parseMap(section.getConfigurationSection("inventory_content")))
+                    .helmet(ADAPTER.parse(Objects.requireNonNull(section.getConfigurationSection("armor_content.helmet"))))
+                    .chestPlate(ADAPTER.parse(Objects.requireNonNull(section.getConfigurationSection("armor_content.chestplate"))))
+                    .leggings(ADAPTER.parse(Objects.requireNonNull(section.getConfigurationSection("armor_content.leggings"))))
+                    .boots(ADAPTER.parse(Objects.requireNonNull(section.getConfigurationSection("armor_content.boots"))))
+                    .items(ADAPTER.parseMap(Objects.requireNonNull(section.getConfigurationSection("inventory_content"))))
                     .build();
 
         } catch (Exception e) {

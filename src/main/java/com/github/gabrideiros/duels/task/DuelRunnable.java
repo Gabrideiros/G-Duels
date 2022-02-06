@@ -32,14 +32,14 @@ public class DuelRunnable implements Runnable {
 
         PlayerUtil.sendMessage(
                 this.duel.getPlayer(),
-                Sound.LEVEL_UP,
+                Sound.ENTITY_PLAYER_LEVELUP,
                 5f,
                 message
         );
 
         PlayerUtil.sendMessage(
                 this.duel.getAdversary(),
-                Sound.LEVEL_UP,
+                Sound.ENTITY_PLAYER_LEVELUP,
                 5f,
                 message
         );

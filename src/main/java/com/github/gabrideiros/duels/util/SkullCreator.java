@@ -159,7 +159,7 @@ public class SkullCreator {
         put(EntityType.IRON_GOLEM, "89091d79ea0f59ef7ef94d7bba6e5f17f2f7d4572c44f90f76c4819a714");
         put(EntityType.SPIDER, "cd541541daaff50896cd258bdbdd4cf80c3ba816735726078bfe393927e57f1");
         put(EntityType.WOLF, "69d1d3113ec43ac2961dd59f28175fb4718873c6c448dfca8722317d67");
-        put(EntityType.PIG_ZOMBIE, "74e9c6e98582ffd8ff8feb3322cd1849c43fb16b158abb11ca7b42eda7743eb");
+        put(EntityType.ZOMBIE_VILLAGER, "74e9c6e98582ffd8ff8feb3322cd1849c43fb16b158abb11ca7b42eda7743eb");
         put(EntityType.BLAZE, "b78ef2e4cf2c41a2d14bfde9caff10219f5b1bf5b35a49eb51c6467882cb5f0");
         put(EntityType.CREEPER, "f4254838c33ea227ffca223dddaabfe0b0215f70da649e944477f44370ca6952");
         put(EntityType.GHAST, "7a8b714d32d7f6cf8b37e221b758b9c599ff76667c7cd45bbc49c5ef19858646");
