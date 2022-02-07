@@ -30,14 +30,14 @@ public class Duel {
 
             if (this.spectators.contains(player)) continue;
 
-            online.hidePlayer(DuelsPlugin.getPlugin(DuelsPlugin.class), player);
+            online.hidePlayer(player);
         }
 
         spectators.add(player);
     }
     public void removeSpectator(Player player) {
 
-        Bukkit.getOnlinePlayers().forEach(online -> online.showPlayer(DuelsPlugin.getPlugin(DuelsPlugin.class), player));
+        Bukkit.getOnlinePlayers().forEach(online -> online.showPlayer(player));
 
         spectators.remove(player);
     }

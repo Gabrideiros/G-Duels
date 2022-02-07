@@ -41,7 +41,7 @@ public class AcceptCommand implements CommandExecutor {
         if (!this.duelService.getInvite().containsKey(player)) {
             PlayerUtil.sendMessage(
                     player,
-                    Sound.ENTITY_VILLAGER_NO,
+                    Sound.VILLAGER_NO,
                     5f,
                     "§cYou don't have any pending invites."
             );
@@ -53,7 +53,7 @@ public class AcceptCommand implements CommandExecutor {
         if (!duel.getAdversary().equals(target)) {
             PlayerUtil.sendMessage(
                     player,
-                    Sound.ENTITY_VILLAGER_NO,
+                    Sound.VILLAGER_NO,
                     5f,
                     "§cThis player has not invited."
             );

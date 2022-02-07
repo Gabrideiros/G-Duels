@@ -43,7 +43,7 @@ public class StatsCommand implements CommandExecutor {
 
             PlayerUtil.sendMessage(
                     (Player) sender,
-                    Sound.ENTITY_PLAYER_LEVELUP,
+                    Sound.LEVEL_UP,
                     5f,
                     "",
                     String.format("§e§l Status of %s:", target.getName()),
